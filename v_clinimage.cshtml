@@ -1,0 +1,142 @@
+﻿<style>
+
+</style>
+
+<div class="panel panel-primary">
+    <div class="panel-heading  col-xs-12">
+        <div class="actionMenu">
+            <ul class="nav1 navbar-nav navbar-right">
+                <li><a title="Close" data-dismiss="modal"><i class="fa fa-times"></i></a></li>
+            </ul>
+        </div>
+        <div class="col-xs-11">
+            <h5 class="modal-title MenuSearchModalTitle">
+                <span id="clinimagetitle"></span>:
+                <span id="patname" class="pnx_label"></span>
+                <span id="patid" class="pnx_label"></span>
+            </h5>
+        </div>
+    </div>
+    <div class="panel-body">
+        &nbsp;
+        <div class="panel panel-primary" id="PedigreeLegend">
+            <div class="panel-heading-collapse">
+                <div class="panel-group-collapse" id="accordionControls" role="tablist" aria-multiselectable="true">
+                    <div class="panel-collapse-title">
+                        <a role="button" data-toggle="collapse" data-parent="#accordionControls" href="#collapseOneControls" aria-expanded="true" aria-controls="collapseOneControls">
+                            Legend
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="collapseOneControls" aria-expanded="true" class="collapse in">
+                <div class="panel-body panel-body-collapse">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="legenddiv"><span class="legendlabels">Male</span><div class="square" id="Male" draggable="true" ondragstart="drag(event);" clone="yes"></div></div>
+
+                            <div class="legenddiv"><span class="legendlabels">Female</span><div class="circle" id="Female" draggable="true" ondragstart="drag(event);" clone="yes"></div></div>
+
+                            @*<div class="col-xs-2 col-sm-1"><div id="marriage" draggable="true" ondragstart="drag(event);" clone="yes"><div class="fig3"> </div></div>Marriage</div>*@
+                            <div class="legenddiv"><span class="legendlabels">Marriage</span><div id="marriage" draggable="true" ondragstart="drag(event);" clone="yes"><div class="fig6"><div class="fig6square"></div> </div></div></div>
+
+                            @*<div class="col-xs-2 col-sm-1"><div id="cons_marriage" draggable="true" ondragstart="drag(event);" clone="yes"><div class="fig4"> </div></div>Consanguineous Marriage</div>*@
+                            <div class="legenddiv"><span class="legendlabels">Consanguineous Marriage</span><div id="cons_marriage" draggable="true" ondragstart="drag(event);" clone="yes"><div class="fig5"><div class="fig5square"></div> </div></div></div>
+
+                            <div class="legenddiv"><span class="legendlabels">Unspecified Sex</span><div class="triangledown" id="UnspecifiedSex" draggable="true" ondragstart="drag(event);" clone="yes"></div></div>
+
+                            <div class="legenddiv"><span class="legendlabels">Pregnancy</span><div class="diamond" id="Pregnancy" draggable="true" ondragstart="drag(event);" clone="yes"><div class="diamond1"></div></div></div>
+
+                            @*<div class="col-xs-2 col-sm-1"><div class="strikedtriangleup" id="ElectiveAbortion" draggable="true" ondragstart="drag(event);" clone="yes"></div>Elective Abortion</div>*@
+                            <div class="legenddiv"><span class="legendlabels">Elective Abortion</span><div id="ElectiveAbortion" draggable="true" ondragstart="drag(event);" clone="yes"><div class="strikedtriangleup"><div class="strikedtriangleupinner"></div></div></div></div>
+
+                            <div class="legenddiv"><span class="legendlabels">Spontaneous Abortion</span><div class="triangleup" id="SpontaneousAbortion" draggable="true" ondragstart="drag(event);" clone="yes"></div></div>
+
+                            <div class="legenddiv"><span class="legendlabels">Proband</span><div id="Proband" draggable="true" ondragstart="drag(event);" clone="yes"><div class="probandrect"><span class="arrow arrow-bar is-top"></span></div></div></div>
+                            <div class="legenddiv"><span class="legendlabels">No Children</span><div id="NoChildren" draggable="true" ondragstart="drag(event);" clone="yes"><div class="square"><div class="fig7circle"><div class="invertedletter-t"></div></div></div></div></div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="col-sm-3 col-md-2 col-xs-5">
+                                <fieldset class="fieldsetpedigree">
+                                    <legend>Affected</legend>
+                                    <div class="legenddiv"><div class="filledsquare" id="FilledSquare" draggable="true" ondragstart="drag(event);" clone="yes"></div></div>
+                                    <div class="legenddiv">or</div>
+                                    <div class="legenddiv"><div class="filledcircle" id="Affected" draggable="true" ondragstart="drag(event);" clone="yes"></div></div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-sm-3 col-md-2 col-xs-7">
+                                <fieldset class="fieldsetpedigree">
+                                    <legend>Heterozygote(Carrier)</legend>
+                                    <div class="legenddiv"><div id="HalfShadedSquare" draggable="true" ondragstart="drag(event);" clone="yes"><div class="halfshadedsquare"><div class="halfshadedsquareinner"></div></div></div></div>
+                                    <div class="legenddiv">or</div>
+                                    <div class="legenddiv"><div id="Heterozygote" draggable="true" ondragstart="drag(event);" clone="yes"><div class="halfshadedcircle"><div class="halfshadedcircleinner"></div></div></div></div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-sm-3 col-md-2 col-xs-5">
+                                <fieldset class="fieldsetpedigree">
+                                    <legend>Decreased</legend>
+                                    <div class="legenddiv"><div id="oval" draggable="true" ondragstart="drag(event);" clone="yes"><div class="strikedoval"><div class="strikedovalinner"></div></div></div></div>
+                                    <div class="legenddiv">or</div>
+                                    <div class="legenddiv"><div id="Decreased" draggable="true" ondragstart="drag(event);" clone="yes"><div class="strikedfilledsquare"><div class="strikedfilledsquareinner"></div></div></div></div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col-sm-3 col-md-4 col-xs-7">
+                                <fieldset class="fieldsetpedigree">
+                                    <legend>Monozygotic Twins</legend>
+                                    <div class="legenddiv"><div id="dualcircle" draggable="true" ondragstart="drag(event);" clone="yes"><div class="circle"><div class="circleinner"><div class="letter-a"></div></div></div></div></div>
+                                    <div class="legenddiv">&nbsp;&nbsp;&nbsp;&nbsp;or</div>
+                                    <div class="legenddiv"><div id="dualsquare" draggable="true" ondragstart="drag(event);" clone="yes"><div class="square"><div class="squareinner"><div class="letter-a"></div></div></div></div></div>
+                                    <div class="legenddiv">&nbsp;&nbsp;</div>
+                                    <div class="legenddiv"><div id="foursectionsquare" draggable="true" ondragstart="drag(event);" clone="yes"><div class="square"><div class="foursections"></div></div></div></div>
+                                    <div class="legenddiv">or</div>
+                                    <div class="legenddiv"><div id="foursectionoval" draggable="true" ondragstart="drag(event);" clone="yes"><div class="oval"><div class="foursections"></div></div></div></div>
+
+                                </fieldset>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="legenddiv"><div class="textbox" id="Textbox" draggable="true" ondragstart="drag(event);" clone="yes">T</div></div>
+                    <div class="legenddiv"><div class="horizontalconnector" id="HorizontalConnector" draggable="true" ondragstart="drag(event);" clone="yes"></div></div>
+                    <div class="legenddiv" style="vertical-align:bottom;"><div class="verticalconnector" id="VerticalConnector" draggable="true" ondragstart="drag(event);" clone="yes"></div></div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+            <div class="panel-body" style="padding:5px!important;">
+                <div class="col-xs-12" style="padding:0;">
+                    <label class="pnx_label">** Double click on specific image to delete</label>
+                    <div id="drawingboard" ondrop="drop(event);" ondragover="allowDrop(event);"></div>
+                    <hr style="border:solid 2px" hidden />
+                    <img id="imgclinimage" hidden />
+                    <input type="hidden" id="is_imagetype" />
+                </div>
+                <div class="col-xs-12">
+                    <button class="btn btn-primary" id="save" onclick="f_btn_clicked(this.id);"><span class="glyphicon glyphicon-floppy-save"></span>&nbsp;<span>Save</span></button>
+                    <button class="btn btn-danger" id="clear" onclick="f_btn_clicked(this.id);"><span class="glyphicon glyphicon-remove"></span>&nbsp;<span>Clear</span></button>
+                    <button class="btn btn-success" id="print" onclick="f_btn_clicked(this.id);"><span class="glyphicon glyphicon-print"></span>&nbsp;<span>Print</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $.loadCSS(location_origin + '/eSystem-App/Content/css/clinimage_stylesheet.css');
+    $.getScript(location_origin + '/eSystem-App/Scripts/eSystem-App-Js/w_clinimage/j_clinimage.js');
+</script>
+

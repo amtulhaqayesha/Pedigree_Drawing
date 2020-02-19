@@ -1,0 +1,719 @@
+﻿#PedigreeLegend 
+{
+    max-height:300px;
+    overflow:auto;
+}
+
+.legenddiv {
+    display: inline-block;
+    margin: 10px;
+}
+
+.legendlabels{
+    font-size:11px;
+}
+
+fieldset .legenddiv{
+    margin:5px;
+}
+
+#PedigreeLegend  fieldset legend{
+    font-size:11px;
+}
+
+.square {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+}
+
+.circle {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    border-radius: 50%;
+}
+
+
+
+/*.fig3 {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    border-radius: 50%;
+}
+
+
+    .fig3:before {
+        background: grey;
+        content: "";
+        height: 2px;
+        width: 20px;
+        position: absolute;
+        left: 35px;
+        top: 10px;
+    }
+
+    .fig3:after {
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border: solid 2px grey;
+        position: absolute;
+        content: "";
+        left: 55px;
+        top: 1px;
+    }
+
+#drawingboard .fig3:before {
+    left: 20px;
+}
+
+#drawingboard .fig3:after {
+    left: 40px;
+}*/
+
+.fig6 {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    border-radius: 50%;
+}
+
+.fig6square {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    position: relative;
+    content: "";
+    left: 35px;
+    top: -1px;
+}
+
+
+
+    .fig6square:before {
+        background: grey;
+        content: "";
+        height: 2px;
+        width: 18px;
+        position: absolute;
+        left: -20px;
+        top: 5px;
+    }
+
+
+/*.fig4 {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    border-radius: 50%;
+}
+
+
+    .fig4:before {
+        background: #fff;
+        border: solid 2px grey;
+        border-left: transparent;
+        border-right: transparent;
+        content: "";
+        height: 7px;
+        width: 20px;
+        position: absolute;
+        left: 35px;
+        top: 7px;
+    }
+
+    .fig4:after {
+        height: 20px;
+        width: 20px;
+        background-color: white;
+        border: solid 2px grey;
+        position: absolute;
+        content: "";
+        left: 55px;
+        top: 1px;
+    }
+
+#drawingboard .fig4:before {
+    left: 20px;
+}
+
+#drawingboard .fig4:after {
+    left: 40px;
+}*/
+
+.fig5 {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    border-radius: 50%;
+}
+
+.fig5square {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    position: relative;
+    content: "";
+    left: 35px;
+    top: -1px;
+}
+
+    .fig5square:before {
+        background: #fff;
+        border: solid 2px grey;
+        border-left: transparent;
+        border-right: transparent;
+        content: "";
+        height: 7px;
+        width: 18px;
+        position: absolute;
+        left: -20px;
+        top: 4px;
+    }
+
+
+.triangledown {
+    width: 0;
+    height: 0;
+    /*margin: 20px auto;*/
+    position: relative;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-top: 25px solid grey;
+}
+
+    .triangledown:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 20px solid #fff;
+        top: -23px;
+        left: -10px;
+    }
+
+.diamond {
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-bottom-color: grey;
+    position: relative;
+    top: -15px;
+}
+
+    .diamond:after {
+        content: '';
+        position: absolute;
+        left: -15px;
+        top: 15px;
+        width: 0;
+        height: 0;
+        border: 15px solid transparent;
+        border-top-color: grey;
+    }
+
+.diamond1 {
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-bottom-color: #fff;
+    position: relative;
+    left: -10px;
+    top: -5px;
+}
+
+    .diamond1:before {
+        content: 'P';
+        position: absolute;
+        left: -5px;
+        top: 3px;
+        z-index: 11;
+        color: grey;
+    }
+
+    .diamond1:after {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: 10px;
+        width: 0;
+        height: 0;
+        border: 10px solid transparent;
+        border-top-color: #fff;
+        z-index: 10;
+    }
+
+/*.strikedtriangleup {
+    width: 0;
+    height: 0;   
+    position: relative;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 25px solid grey;
+}
+
+    .strikedtriangleup:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid #fff;
+        top: 3px;
+        left: -10px;
+    }
+
+    .strikedtriangleup:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 2px solid transparent;        
+        border-bottom: 45px solid grey;        
+        left: -4px;
+        transform: rotate(205deg);
+    }*/
+
+.strikedtriangleup {
+    width: 0;
+    height: 0;   
+    position: relative;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 25px solid grey;
+}
+
+    .strikedtriangleupinner {
+        content: '';
+        width: 0;
+        height: 0;
+        position: relative;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid #fff;
+        top: 3px;
+        left: -10px;
+    }
+
+        .strikedtriangleupinner:after {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            border-left: 2px solid transparent;
+            /* border-right: 10px solid transparent; */
+            border-bottom: 40px solid grey;
+             top: -3px; 
+            left: -3px;
+            transform: rotate(205deg);
+        }
+
+.triangleup {
+    width: 0;
+    height: 0;
+    /* margin: 20px auto; */
+    position: relative;
+    border-left: 13px solid transparent;
+    border-right: 13px solid transparent;
+    border-bottom: 25px solid grey;
+}
+
+    .triangleup:before {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 20px solid #fff;
+        top: 3px;
+        left: -10px;
+    }
+
+.probandrect {
+    height: 18px;
+    width: 22px;
+    background-color: white;
+    border: solid 2px grey;
+}
+
+.arrow {
+    display: block;
+    /* height: 5px; */
+    position: relative;
+    width: 5px;
+    left: -15px;
+    top: 25px;
+}
+
+
+    .arrow::after {
+        border-bottom-style: solid;
+        border-bottom-width: 2px;
+        border-right-style: solid;
+        border-right-width: 2px;
+        content: '';
+        display: inline-block;
+        height: 12px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 12px;
+    }
+
+    .arrow.arrow-bar::before {       
+        content: '';
+        height: 17px;
+        position: absolute;
+        right: -8px;
+        top: -6px;
+        transform-origin: bottom;
+        width: 2px;
+        -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    .arrow.is-top {
+        -moz-transform: rotate(275deg);
+        -ms-transform: rotate(275deg);
+        -webkit-transform: rotate(275deg);
+        transform: rotate(275deg);
+    }
+
+    .arrow::after,
+    .arrow .arrow::after {
+        border-color: grey;
+    }
+
+    .arrow::before,
+    .arrow .arrow::before {
+        background-color: grey;
+    }
+
+.filledsquare {
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    border: solid 2px grey;
+}
+
+.filledcircle {
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    border: solid 2px grey;
+    border-radius: 50%;
+}
+
+.halfshadedsquare {
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    border: solid 2px grey;
+}
+
+    /*.halfshadedsquare:before {
+        height: 18px;
+        width: 12px;
+        background-color: white;
+        border: solid 2px grey;
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 1px;
+    }*/
+    .halfshadedsquareinner {
+        height: 18px;
+        width: 12px;
+        background-color: white;
+        border: solid 2px grey;       
+        position: relative;
+        left: -2px;
+        top: -1px;
+    }
+
+.halfshadedcircle {
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    border: solid 2px grey;
+    border-radius: 50%;
+}
+
+    /*.halfshadedcircle:before {
+        height: 18px;
+        width: 12px;
+        background-color: white;
+        border: solid 2px grey;
+        border-radius: 50%;
+        content: '';
+        position: absolute;
+        left: 15px;
+        top: 1px;
+        border-bottom-left-radius: 90px;
+        border-top-left-radius: 90px;
+    }*/
+
+    .halfshadedcircleinner {
+        height: 18px;
+        width: 12px;
+        background-color: white;
+        border: solid 2px grey;
+        border-radius: 50%;        
+        position: relative;
+        left: -2px;
+        top: -1px;
+        border-bottom-left-radius: 90px;
+        border-top-left-radius: 90px;
+    }
+
+
+.strikedoval {
+    width: 30px;
+    height: 15px;
+    background: grey;
+    border-radius: 100px / 50px;
+}
+
+    /*.strikedoval:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 2px solid transparent;        
+        border-bottom: 45px solid grey;
+        top: -10px;
+        left: 25px;
+        transform: rotate(205deg);
+    }
+
+#drawingboard .strikedoval:after {
+    left: 10px;
+}
+*/
+    .strikedovalinner {       
+        width: 0;
+        height: 0;
+        position: relative;
+        border-left: 2px solid transparent;       
+        border-bottom: 35px solid grey;
+        top: -7px;
+        left: 12px;
+        transform: rotate(205deg);
+    }
+
+
+
+.strikedfilledsquare {
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    border: solid 2px grey;
+}
+
+    /*.strikedfilledsquare:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-left: 2px solid transparent;        
+        border-bottom: 45px solid grey;
+        top: -10px;
+        left: 25px;
+        transform: rotate(205deg);
+    }
+
+#drawingboard .strikedfilledsquare:after {
+    left: 5px;
+}*/
+    .strikedfilledsquareinner {
+        content: '';
+        width: 0;
+        height: 0;
+        position: relative;
+        border-left: 2px solid transparent;
+        /* border-right: 10px solid transparent; */
+        border-bottom: 35px solid grey;
+        top: -7px;
+        left: 8px;
+        transform: rotate(205deg);
+    }
+
+/*.fig7square {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    
+}*/
+
+.fig7circle {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    border-radius: 50%;
+    position:relative;
+    left:25px;
+    top:-2px;
+   
+}
+
+.fig7circle:before{
+    height:5px;
+    width:30px;
+    background-color:transparent;
+    border:solid 1px grey;
+    content:'';
+    position:absolute;
+    left:-20px;
+    top:18px;    
+    border-top:none;
+}
+
+.invertedletter-t {
+    position: relative;
+    width: 20px;
+    height: 7px;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: grey;
+    left: -15px;
+    top: 22px;
+}
+
+    .invertedletter-t::before {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 7px;
+        background: grey;
+        left: 10px;
+    }
+
+.circleinner {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    border-radius: 50%;
+    position:relative;
+    left:20px;
+    top:-2px;
+}
+
+.squareinner {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    position: relative;
+    left: 20px;
+    top: -2px;
+}
+
+.letter-a {
+    height: 20px;
+    width: 20px;
+    background-color: transparent;
+    border: solid 1px grey;
+    border-bottom:none;
+    border-right:none;
+    position: relative;
+    left: -14px;
+    top: -12px;
+    transform:rotate(45deg);
+}
+
+    .letter-a::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: -3px;
+        height: 1px;
+        width: 15px;
+        background: grey;
+        transform: rotate(135deg);
+    }
+
+.oval {
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    border: solid 2px grey;
+    border-radius: 40%;
+}
+
+.foursections{
+    height: 18px;
+    width: 2px;
+    background-color: grey;
+    position:relative;
+    left:7px;    
+}
+    .foursections:after {
+        content: '';
+        height: 2px;
+        width: 18px;
+        background-color: grey;
+        position: absolute;
+        top: 7px;
+        left: -7px;
+    }
+
+
+.fieldsetpedigree
+{
+    padding:0!important;
+    margin:0!important;
+}
+
+.fieldsetpedigree legend {
+    font-weight:initial;
+}
+
+.horizontalconnector {
+        height: 3px;
+        width: 35px;
+        background-color: grey;
+    }
+
+.verticalconnector {
+    width: 3px;
+    height: 30px;
+    background-color: grey;
+}
+
+.textbox
+{
+    font-family:initial;
+    font-size:30px;
+}
+
+
+#drawingboard {
+    background-color: white;
+    position: relative;
+    height: 300px;
+    overflow:auto;
+}
+
+
+
+
+   
